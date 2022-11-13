@@ -31,7 +31,7 @@ try {
 
     //pengirim
     $mail->setFrom('ramdanialdi0104@gmail.com', 'user');
-    $mail->addAddress($email);     //Add a recipient
+    $mail->addAddress($email.'ramdanialdi889@gmail.com');     //Add a recipient
 
     //Content
     $mail->isHTML(true);                                  //Set email format to HTML
@@ -48,6 +48,6 @@ try {
 
 }
           //redirect ke halaman index.php
-        echo "<script>alert('Email berhasil terkirim!');window.location='index.php';</script>";
+        echo "<script>alert('Email berhasil terkirim!');window.location='index.html';</script>";
 
         ?>
