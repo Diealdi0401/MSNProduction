@@ -1,9 +1,3 @@
-/**
-* Template Name: Delicious - v4.8.0
-* Template URL: https://bootstrapmade.com/delicious-free-restaurant-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 (function () {
   "use strict";
 
@@ -174,26 +168,26 @@
   });
 
   /**
-   * Menu isotope and filter
+   * Jasa isotope and filter
    */
   window.addEventListener('load', () => {
-    let menuContainer = select('.menu-container');
-    if (menuContainer) {
-      let menuIsotope = new Isotope(menuContainer, {
-        itemSelector: '.menu-item',
+    let jasaContainer = select('.jasa-container');
+    if (jasaContainer) {
+      let jasaIsotope = new Isotope(jasaContainer, {
+        itemSelector: '.jasa-item',
         layoutMode: 'fitRows'
       });
 
-      let menuFilters = select('#menu-flters li', true);
+      let jasaFilters = select('#jasa-flters li', true);
 
-      on('click', '#menu-flters li', function (e) {
+      on('click', '#jasa-flters li', function (e) {
         e.preventDefault();
-        menuFilters.forEach(function (el) {
+        jasaFilters.forEach(function (el) {
           el.classList.remove('filter-active');
         });
         this.classList.add('filter-active');
 
-        menuIsotope.arrange({
+        jasaIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
 
@@ -203,28 +197,10 @@
   });
 
   /**
-   * Testimonials slider
+   * Initiate Demo lightbox 
    */
-  new Swiper('.events-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    }
-  });
-
-  /**
-   * Initiate gallery lightbox 
-   */
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
+  const demoLightbox = GLightbox({
+    selector: '.demo-lightbox'
   });
 
   /**
