@@ -48,6 +48,6 @@ try {
 
 }
           //redirect ke halaman index.php
-        echo "<script>window.location='../index.html';</script>";
+        echo "<script>window.location='index.html';</script>";
 
         ?>
